@@ -4,7 +4,7 @@ public class JogoDaForca
 {
 	public static void main(String[] args) {
 	    
-	    String[] palavras ={"abacate", "carro", "bicicleta", "programador", "franfo"};
+	    String[] palavras ={"abacate", "carro", "bicicleta", "programador", "frango"};
 	    Scanner input = new Scanner(System.in);
 	    int n = (int) (Math.random()*5), chance = 5;
 	    String palavra, asteristicos = "";
