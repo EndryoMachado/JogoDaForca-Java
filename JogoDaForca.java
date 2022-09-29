@@ -16,7 +16,7 @@ public class Main
 	    //System.out.println(palavra);
 	    while(chance != 0){
 	        System.out.print("\033[H\033[2J");
-            	System.out.flush();
+            System.out.flush();
 	        System.out.println("Chances: " + chance);
 	        System.out.println(asteristicos);
 	        letra = input.next().charAt(0);
@@ -38,6 +38,8 @@ public class Main
 	        }
 	        
 	        if(asteristicos.equals(palavra)){
+	            System.out.print("\033[H\033[2J");
+                System.out.flush();
 	            System.out.println(asteristicos);
 	            System.out.println("Você venceu");
 	            break;
