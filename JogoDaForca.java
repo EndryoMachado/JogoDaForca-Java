@@ -13,10 +13,10 @@ public class Main
 	    for(int i = 0; i < palavra.length(); i++){
 	        asteristicos += "*";
 	    }
-	    System.out.println(palavra);
-	    clearConsole();
+	    //System.out.println(palavra);
 	    while(chance != 0){
-	        
+	        System.out.print("\033[H\033[2J");
+            	System.out.flush();
 	        System.out.println("Chances: " + chance);
 	        System.out.println(asteristicos);
 	        letra = input.next().charAt(0);
