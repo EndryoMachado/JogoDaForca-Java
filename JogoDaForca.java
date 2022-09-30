@@ -1,19 +1,33 @@
 import java.util.Scanner;
+import java.io.*;
 
 public class Main
 {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 	    
-	    String[] palavras ={"abacate", "carro", "bicicleta", "programador", "frango"};
+	    BufferedReader br = new BufferedReader(new FileReader("palavras.txt"));
+       String linha = br.readLine();
+       int qtdeLinhas = 0;
+        while(linha != null){
+            linha = br.readLine();
+            qtdeLinhas++;
+        }
+    	 br.close();
 	    Scanner input = new Scanner(System.in);
-	    int n = (int) (Math.random()*5), chance = 5;
-	    String palavra, asteristicos = "";
+	    int n = (int) (Math.random()*qtdeLinhas+1), chance = 5;
+	    String palavra = "", asteristicos = "";
 	    char letra;
-	    palavra = palavras[n];
+	    
+	    BufferedReader br2 = new BufferedReader(new FileReader("palavras.txt"));
+    	 for(int i = 1; i <= n; i++){
+    	     linha = br2.readLine();
+    	     palavra = linha;
+    	 }
+	    
 	    for(int i = 0; i < palavra.length(); i++){
 	        asteristicos += "*";
 	    }
-	    //System.out.println(palavra);
+	    System.out.println(palavra);
 	    while(chance != 0){
 	        System.out.print("\033[H\033[2J");
             System.out.flush();
